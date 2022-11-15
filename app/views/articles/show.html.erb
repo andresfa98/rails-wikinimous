@@ -1,0 +1,10 @@
+<h1>Article</h1>
+
+ <div style="border: 3px solid blue; padding: 15px; margin-bottom: 10px; width: 25vw;">
+    <h2><%= @article.title %></h2>
+    <h4><%= @article.context %></h4>
+    <div><%= link_to "update article", edit_article_path(@article) %></div>
+    <%= link_to "delete article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <div><%= link_to "Homepage", articles_path %></div>
+    <div><%= link_to "New article", new_article_path %></div>
+</div>

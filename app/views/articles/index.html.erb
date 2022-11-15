@@ -1,0 +1,9 @@
+<h1 style="text-center">Hello from index</h1>
+<h2><%= link_to "New article", new_article_path %></h2>
+
+<% @articles.each do |article| %>
+    <div style="border: 3px solid blue; padding: 15px; margin-bottom: 10px; width: 25vw;">
+        <h2><%= link_to article.title, article_path(article)%></h2>
+        <h4><%= article.context %></h4>
+    </div>
+<% end %>
